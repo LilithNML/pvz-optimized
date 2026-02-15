@@ -1493,3 +1493,11 @@ body.game-paused #cover {
 .credit-name {
 	text-align: left;
 }
+#dProduceZombie p {
+	margin-bottom: 12px;
+    margin-top: 9px;
+}
+#dProducePlant p {
+	margin-bottom: 12px;
+    margin-top: 9px;
+}
