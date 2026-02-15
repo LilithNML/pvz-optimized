@@ -2136,7 +2136,8 @@ var oMustacheZombie = InheritO(oZombie, {
 	EName: "oMustacheZombie",
 	CName: "Mustache Zombie",
 	HP: 540,
-	Produce: '<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>Toughness: <font color="#CC241D">high</font></p>"Ginger gets spicier with age" is a saying<br>that also exists in the zombie world.<br>Thus, some old zombies have also<br>gone to the battlefield.',
+	Produce:
+		'<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>Toughness: <font color="#CC241D">high</font></p>"Ginger gets spicier with age" is a saying<br>that also exists in the zombie world.<br>Thus, some old zombies have also<br>gone to the battlefield.',
 	PicArr: (function () {
 		var a = "images/Zombies/Zombie/";
 		var b = "images/Zombies/MustacheZombie/";
@@ -2336,8 +2337,8 @@ var oLionDanceZombie = InheritO(oConeheadZombie, {
 			b + "1.gif",
 		];
 	})(),
-	Produce:
-		'<font color="#28325A">(not documented yet)</font>'});
+	Produce: '<font color="#28325A">(not documented yet)</font>',
+});
 var oBucketheadZombie = InheritO(
 	oConeheadZombie,
 	{
@@ -2578,7 +2579,7 @@ var oPoleVaultingZombie = InheritO(OrnNoneZombies, {
 	})(),
 	AudioArr: ["polevault", "grassstep"],
 	Produce:
-	'<font color="#28325A">Pole Vaulting Zombie vaults with a pole.</font><p>Toughness: <font color="#CC241D">medium</font><br>Speed: <font color="#CC241D">fast, then normal (after jump)</font><br>Special: <font color="#CC241D">jumps the first plant he runs into</font></p>Some zombies take it further, aspire<br>more, push themselves beyond the normal<br>into greatness. That\'s Pole Vaulting<br>Zombie right there. That is so him.',
+		'<font color="#28325A">Pole Vaulting Zombie vaults with a pole.</font><p>Toughness: <font color="#CC241D">medium</font><br>Speed: <font color="#CC241D">fast, then normal (after jump)</font><br>Special: <font color="#CC241D">jumps the first plant he runs into</font></p>Some zombies take it further, aspire<br>more, push themselves beyond the normal<br>into greatness. That\'s Pole Vaulting<br>Zombie right there. That is so him.',
 	getShadow(a) {
 		return "left:" + (a.beAttackedPointL - 20) + "px;top:" + (a.height - 35) + "px";
 	},
@@ -3413,7 +3414,8 @@ var oTrashZombie = InheritO(oScreenDoorZombie, {
 		];
 	})(),
 	Produce:
-		'<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>There\'s a story like this: An old man bought a house, and soon after, a young man started kicking trash cans nearby for fun. The old man couldn\'t stand the noise, so he told the young man, “If you come kick the trash cans every day, I\'ll give you a dollar.” The young man was thrilled and started kicking the trash cans. Three days later, the old man said, “Because of inflation, starting tomorrow I can only give you fifty cents.” The young man wasn\'t thrilled, but he accepted it. That afternoon, he went back to kicking the trash can. Five days later, the old man told him, “I haven\'t received my pension lately, so I can only give you twenty cents now.” “Twenty cents?” The young man flew into a rage and never came back to kick the trash can again."</p>'});
+		"<font color=\"#28325A\">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>There's a story like this: An old man bought a house, and soon after, a young man started kicking trash cans nearby for fun. The old man couldn't stand the noise, so he told the young man, “If you come kick the trash cans every day, I'll give you a dollar.” The young man was thrilled and started kicking the trash cans. Three days later, the old man said, “Because of inflation, starting tomorrow I can only give you fifty cents.” The young man wasn't thrilled, but he accepted it. That afternoon, he went back to kicking the trash can. Five days later, the old man told him, “I haven't received my pension lately, so I can only give you twenty cents now.” “Twenty cents?” The young man flew into a rage and never came back to kick the trash can again.\"</p>",
+});
 var oAquaticZombie = InheritO(OrnNoneZombies, {
 	StandGif: 4,
 	AttackGif: 5,
@@ -4641,7 +4643,7 @@ var oZomboni = (function () {
 		AKind: 2,
 		Attack: 50,
 		Produce:
-		'<font color="#28325A">The Zomboni applies ice, steam and<br>pressure to your plants.</font><p>Toughness: <font color="#CC241D">high</font><br>Special: <font color="#CC241D">crushes plants, leaves an ice trail</font></p>Often mistaken for a zombie driving an<br>ice machine, the Zomboni is a totally<br>different life-form more closely related<br>to a space ogre than a zombie.',
+			'<font color="#28325A">The Zomboni applies ice, steam and<br>pressure to your plants.</font><p>Toughness: <font color="#CC241D">high</font><br>Special: <font color="#CC241D">crushes plants, leaves an ice trail</font></p>Often mistaken for a zombie driving an<br>ice machine, the Zomboni is a totally<br>different life-form more closely related<br>to a space ogre than a zombie.',
 		BookHandBack: "Ice",
 		BookHandPosition: "32% 52%",
 		PicArr: (function () {
