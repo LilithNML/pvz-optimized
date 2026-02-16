@@ -3415,7 +3415,7 @@ var oTrashZombie = InheritO(oScreenDoorZombie, {
 	})(),
 	Produce:
 		'<font color="#28325A">A zombie holding a trash can.</font><p>Toughness: <font color="#CC241D">high</font></p>Sadly the Trash Can Zombie isn\'t here to pick up litter, or offer helpful tips on how to recycle your vegetable peelings or glass. If you\'ve been closely studying this book, you will have realized by now that this zombie wants to eat your brains. He just uses the trash can to protect himself, not tidy up. What a shame.That said Trash Can Zombie is all about recycling waste. In this case he\'s eager for you to recycle the "waste" brains sloshing about in your skull into something better-- his dinner.',
-	});
+});
 var oAquaticZombie = InheritO(OrnNoneZombies, {
 	StandGif: 4,
 	AttackGif: 5,
