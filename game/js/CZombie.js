@@ -2512,7 +2512,7 @@ var oHeiFootballZombie = InheritO(oFootballZombie, {
 		];
 	})(),
 	Produce:
-		'<font color="#28325A">Giga-Football Zombie makes his teammates.</font><p>Toughness: <font color="#CC241D">extremely high</font><br>Speed: <font color="#CC241D">fast</font><br>Weakness: <font color="#CC241D">magnet-shroom</font></p>He dresses in a low-key and dim fashion. He is the leader of the field in zombie football, delivering both offensively and defensively even better. Yet he also has no idea what a football is.',
+		'<font color="#28325A">Giga-Football Zombie makes the big plays.</font><p>Toughness: <font color="#CC241D">extremely high</font><br>Speed: <font color="#CC241D">fast</font><br>Weakness: <font color="#CC241D">chomper and magnet-shroom</font></p>He dresses in a low-key and dim fashion; He is the leading person of the field of zombie football, delivering both offensively and defensively even better. Yet he also has no idea what a football is.',
 });
 var oCFootballZombie = InheritO(oFootballZombie, {
 	EName: "oCFootballZombie",
@@ -3413,7 +3413,8 @@ var oTrashZombie = InheritO(oScreenDoorZombie, {
 		];
 	})(),
 	Produce:
-		'<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>There\'s a story like this: An old man bought a house, and soon after, a young man started kicking trash cans nearby for fun. The old man couldn\'t stand the noise, so he told the young man, “If you come kick the trash cans every day, I\'ll give you a dollar.” The young man was thrilled and started kicking the trash cans. Three days later, the old man said, “Because of inflation, starting tomorrow I can only give you fifty cents.” The young man wasn\'t thrilled, but he accepted it. That afternoon, he went back to kicking the trash can. Five days later, the old man told him, “I haven\'t received my pension lately, so I can only give you twenty cents now.” “Twenty cents?” The young man flew into a rage and never came back to kick the trash can again."</p>'});
+		'<font color="#28325A">A zombie holding a trash can.</font><p>Toughness: <font color="#CC241D">high</font></p>Sadly the Trash Can Zombie isn\'t here to pick up litter, or offer helpful tips on how to recycle your vegetable peelings or glass. If you\'ve been closely studying this book, you will have realized by now that this zombie wants to eat your brains. He just uses the trash can to protect himself, not tidy up. What a shame.That said Trash Can Zombie is all about recycling waste. In this case he\'s eager for you to recycle the "waste" brains sloshing about in your skull into something better-- his dinner.',
+	});
 var oAquaticZombie = InheritO(OrnNoneZombies, {
 	StandGif: 4,
 	AttackGif: 5,
