@@ -2136,7 +2136,8 @@ var oMustacheZombie = InheritO(oZombie, {
 	EName: "oMustacheZombie",
 	CName: "Mustache Zombie",
 	HP: 540,
-	Produce: '<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>Toughness: <font color="#CC241D">high</font></p>"Ginger gets spicier with age" is a saying<br>that also exists in the zombie world.<br>Thus, some old zombies have also<br>gone to the battlefield.',
+	Produce:
+		'<font color="#28325A">A mysterious zombie that appears in the<br>Evergreen Tower.</font><p>Toughness: <font color="#CC241D">high</font></p>"Ginger gets spicier with age" is a saying<br>that also exists in the zombie world.<br>Thus, some old zombies have also<br>gone to the battlefield.',
 	PicArr: (function () {
 		var a = "images/Zombies/Zombie/";
 		var b = "images/Zombies/MustacheZombie/";
@@ -2336,8 +2337,8 @@ var oLionDanceZombie = InheritO(oConeheadZombie, {
 			b + "1.gif",
 		];
 	})(),
-	Produce:
-		'<font color="#28325A">(not documented yet)</font>'});
+	Produce: '<font color="#28325A">(not documented yet)</font>',
+});
 var oBucketheadZombie = InheritO(
 	oConeheadZombie,
 	{
@@ -2578,7 +2579,7 @@ var oPoleVaultingZombie = InheritO(OrnNoneZombies, {
 	})(),
 	AudioArr: ["polevault", "grassstep"],
 	Produce:
-	'<font color="#28325A">Pole Vaulting Zombie vaults with a pole.</font><p>Toughness: <font color="#CC241D">medium</font><br>Speed: <font color="#CC241D">fast, then normal (after jump)</font><br>Special: <font color="#CC241D">jumps the first plant he runs into</font></p>Some zombies take it further, aspire<br>more, push themselves beyond the normal<br>into greatness. That\'s Pole Vaulting<br>Zombie right there. That is so him.',
+		'<font color="#28325A">Pole Vaulting Zombie vaults with a pole.</font><p>Toughness: <font color="#CC241D">medium</font><br>Speed: <font color="#CC241D">fast, then normal (after jump)</font><br>Special: <font color="#CC241D">jumps the first plant he runs into</font></p>Some zombies take it further, aspire<br>more, push themselves beyond the normal<br>into greatness. That\'s Pole Vaulting<br>Zombie right there. That is so him.',
 	getShadow(a) {
 		return "left:" + (a.beAttackedPointL - 20) + "px;top:" + (a.height - 35) + "px";
 	},
@@ -4642,7 +4643,7 @@ var oZomboni = (function () {
 		AKind: 2,
 		Attack: 50,
 		Produce:
-		'<font color="#28325A">The Zomboni applies ice, steam and<br>pressure to your plants.</font><p>Toughness: <font color="#CC241D">high</font><br>Special: <font color="#CC241D">crushes plants, leaves an ice trail</font></p>Often mistaken for a zombie driving an<br>ice machine, the Zomboni is a totally<br>different life-form more closely related<br>to a space ogre than a zombie.',
+			'<font color="#28325A">The Zomboni applies ice, steam and<br>pressure to your plants.</font><p>Toughness: <font color="#CC241D">high</font><br>Special: <font color="#CC241D">crushes plants, leaves an ice trail</font></p>Often mistaken for a zombie driving an<br>ice machine, the Zomboni is a totally<br>different life-form more closely related<br>to a space ogre than a zombie.',
 		BookHandBack: "Ice",
 		BookHandPosition: "32% 52%",
 		PicArr: (function () {

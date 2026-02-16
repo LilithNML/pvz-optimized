@@ -1390,18 +1390,18 @@ td.HandBookZombie {
 
 #dProduceZombie {
 	margin-top: -5px;
-    margin-left: 40px;
-    margin-right: auto;
-    width: 265px;
-    height: 159px;
-    position: relative;
-    z-index: 257;
-    text-align: left;
-    font-size: 16px;
-    line-height: 16px;
-    font-family: Tahoma;
-    overflow-y: auto;
-    color: #8f431b;
+	margin-left: 40px;
+	margin-right: auto;
+	width: 265px;
+	height: 159px;
+	position: relative;
+	z-index: 257;
+	text-align: left;
+	font-size: 16px;
+	line-height: 16px;
+	font-family: Tahoma;
+	overflow-y: auto;
+	color: #8f431b;
 }
 
 #dProduceZombie::-webkit-scrollbar {
