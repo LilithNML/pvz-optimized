@@ -639,7 +639,7 @@ td.HandBookZombie {
 	background: url(images/interface/Button.png) no-repeat;
 }
 
-#imgSF {
+#imgSF, #imgSFNT {
 	position: absolute;
 	cursor: url(images/interface/Pointer.cur), pointer;
 	z-index: 256;
