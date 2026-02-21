@@ -12,7 +12,7 @@ This version contains new content such as improved music, Balloonatic, Vasebreak
 
 The developers/modders of this web game **do not** claim ownership of any assets from the official _Plants vs. Zombies_ franchise. Our game has **no monetization** features (e.g. advertisements, popups)
 
-**Hosting this fangame without proper attribution violates the Required Notice section of the 
+**Hosting this fangame without proper attribution violates the Required Notice section of the
 PolyForm Noncommercial License. We actively monitor for unauthorized use and will contact sites and potentially hosting platforms to address these violations.**
 
 ### If requested by an official source, we will promptly take down this GitHub repo and the GitHub pages site.
