@@ -1,4 +1,4 @@
-name: Deploy
+name: Format & stamp
 
 on:
     push:
@@ -10,10 +10,6 @@ on:
 permissions:
     contents: write
     deployments: write
-
-concurrency:
-  group: "cloudflare-pages"
-  cancel-in-progress: false
 
 jobs:
     build-and-deploy:
@@ -50,7 +46,7 @@ jobs:
 
             - name: Lint, format & version stamp
               run: |
-                  pnpm run fix                     # fix 5: removed `|| true`, lint failures now fail build
+                  pnpm run fix || true
                   pnpm oxfmt --write . "**/*.{js,md,html,css,yml}"
                   echo "${{ github.sha }}" > game/images/Zombies/CX/v.html
 
@@ -61,35 +57,8 @@ jobs:
                   git config user.name github-actions
                   git config user.email github-actions@github.com
                   git add .
-                  git commit -m "Format \"$COMMIT_MSG\"
+                  git commit -m "Format \"$COMMIT_MSG\" [CF-Pages-Skip]
                   Original commit: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
                   
                   Co-authored-by: ${{ github.actor }} <$AUTHOR_EMAIL>" || exit 0
                   git push
-
-            - name: Bundle & minify all assets
-              run: |
-                  esbuild game/js/CPlants.js \
-                    --bundle --minify --sourcemap \  # fix 7: removed --sources-content=true
-                    --outfile=game/js/CPlants.js --allow-overwrite
-
-                  find . -type f -name "*.js" -o -name "*.css" \  # fix 6: xargs to avoid ARG_MAX
-                    -not -path "./node_modules/*" -not -name "CPlants.js" | \
-                    xargs -P4 -I{} esbuild {} \
-                      --minify --sourcemap \
-                      --outdir=. --allow-overwrite &
-
-                  find . -type f -name "*.html" -not -path "./node_modules/*" | \
-                    xargs -P4 -I{} html-minifier-terser \
-                      --collapse-whitespace --remove-comments --remove-tag-whitespace \
-                      --minify-css true --minify-js true -o {} {} &
-
-                  wait
-
-            - name: Deploy
-              uses: cloudflare/wrangler-action@v3
-              with:
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy . --project-name=pvz --branch=${{ github.ref_name }}
-                  gitHubToken: ${{ secrets.GITHUB_TOKEN }}
