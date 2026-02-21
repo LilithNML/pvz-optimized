@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
     build-and-deploy:
-        runs-on: ubuntu-latest
+        runs-on: blacksmith-4vcpu-ubuntu-2404
         env:
             PNPM_HOME: /home/runner/.local/share/pnpm
         steps:
