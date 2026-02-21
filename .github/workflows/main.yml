@@ -27,7 +27,7 @@ jobs:
                   fetch-depth: 1
 
             - name: Setup Node.js & pnpm
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: "lts/*"
 
@@ -42,16 +42,15 @@ jobs:
               with:
                   path: |
                       ~/.local/share/pnpm/global
-                      ~/.local/share/pnpm/store
-                  key: pnpm-global-${{ hashFiles('.github/workflows/main.yml') }}
+                  key: pnpm-global-${{ hashFiles('pnpm-lock.yaml') }}
                   restore-keys: pnpm-global-
 
             - name: Install dependencies
-              run: pnpm add -g oxlint oxfmt esbuild html-minifier-terser wrangler
+              run: pnpm add -g oxlint oxfmt esbuild html-minifier-terser
 
             - name: Lint, format & version stamp
               run: |
-                  pnpm run fix || true
+                  pnpm run fix                     # fix 5: removed `|| true`, lint failures now fail build
                   pnpm oxfmt --write . "**/*.{js,md,html,css,yml}"
                   echo "${{ github.sha }}" > game/images/Zombies/CX/v.html
 
@@ -71,13 +70,14 @@ jobs:
             - name: Bundle & minify all assets
               run: |
                   esbuild game/js/CPlants.js \
-                    --bundle --minify --sourcemap --sources-content=true \
+                    --bundle --minify --sourcemap \  # fix 7: removed --sources-content=true
                     --outfile=game/js/CPlants.js --allow-overwrite
 
-                  esbuild $(find . -type f \( -name "*.js" -o -name "*.css" \) \
-                    -not -path "./node_modules/*" -not -name "CPlants.js") \
-                    --minify --sourcemap --sources-content=true \
-                    --outdir=. --allow-overwrite &
+                  find . -type f -name "*.js" -o -name "*.css" \  # fix 6: xargs to avoid ARG_MAX
+                    -not -path "./node_modules/*" -not -name "CPlants.js" | \
+                    xargs -P4 -I{} esbuild {} \
+                      --minify --sourcemap \
+                      --outdir=. --allow-overwrite &
 
                   find . -type f -name "*.html" -not -path "./node_modules/*" | \
                     xargs -P4 -I{} html-minifier-terser \
@@ -91,5 +91,5 @@ jobs:
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy . --project-name=pvz --branch=${{ github.head_ref || github.ref_name }}
+                  command: pages deploy . --project-name=pvz --branch=${{ github.ref_name }}
                   gitHubToken: ${{ secrets.GITHUB_TOKEN }}
