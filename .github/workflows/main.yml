@@ -46,7 +46,7 @@ jobs:
                   restore-keys: pnpm-global-
 
             - name: Install dependencies
-              run: pnpm add -g oxlint oxfmt esbuild html-minifier-terserz
+              run: pnpm add -g oxlint oxfmt esbuild html-minifier-terser
 
             - name: Lint, format & version stamp
               run: |
