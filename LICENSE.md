@@ -132,4 +132,4 @@ of your licenses.
 
 ---
 
-Required Notice: Plants vs. Zombies: MODDED (https://github.com/Plants-vs-Zombies-MODDED/game)
+Required Notice: Plants vs. Zombies: MODDED (https://github.com/Plants-vs-Zombies-MODDED/game) © 2025 by ROBINET13 & Clay (ClaytonTDM) is licensed under PolyForm Noncommercial License 1.0.0. This license applies only to original code/content created by the modding team. All Plants vs. Zombies intellectual property remains the exclusive property of PopCap Games and Electronic Arts (EA).
