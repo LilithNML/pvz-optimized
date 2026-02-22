@@ -15,7 +15,7 @@ The developers/modders of this web game **do not** claim ownership of any assets
 **Hosting this fangame without proper attribution violates the Required Notice section of the
 PolyForm Noncommercial License. We actively monitor for unauthorized use and will contact sites and potentially hosting platforms to address these violations.**
 
-### If requested by an official source, we will promptly take down this GitHub repo and the GitHub pages site.
+### If requested by an official source, we will promptly take down this GitHub repo and the Cloudflare pages sites.
 
 You may email an official complaint to [contact@pvzm.net](mailto:contact@pvzm.net).
 
