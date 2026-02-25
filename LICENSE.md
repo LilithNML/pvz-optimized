@@ -166,7 +166,7 @@ In order to protect the rights of developers of the work, you must abide by the 
 
 ### I. Definitions
 
-1. "The License" means *The Changjiang River License*.
+1. "The License" means _The Changjiang River License_.
 
 2. "The work" means the whole and any partial content of the open source work that is protected by the license.
 
@@ -207,4 +207,4 @@ In order to protect the rights of developers of the work, you must abide by the 
 2. Users should be aware that there may be defects in the work. The author is not responsible for any losses caused by these defects.
 
 3. The license does not provide users with any authorization of the brand intellectual property rights of the work. These rights belong to the author.
-</details>
+ </details>
