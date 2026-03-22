@@ -62,3 +62,15 @@ jobs:
                   
                   Co-authored-by: ${{ github.actor }} <$AUTHOR_EMAIL>" || exit 0
                   git push
+
+    mirror:
+        runs-on: blacksmith-2vcpu-ubuntu-2404
+        needs: format-and-stamp
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - uses: pixta-dev/repository-mirroring-action@v1
+              with:
+                  target_repo_url: git@tangled.org:pvzm.net/game
+                  ssh_private_key: ${{ secrets.TANGLED_SSH_PRIVATE_KEY }}
