@@ -3051,7 +3051,7 @@ var SelectModal = function (level) {
 };
 
 var GotoAuthorWebsite = function () {
-	window.open("https://github.com/Plants-vs-Zombies-MODDED/game");
+	window.open("https://repo.pvzm.net");
 };
 
 var InitGame = function () {
