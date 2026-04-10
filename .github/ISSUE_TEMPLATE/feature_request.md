@@ -4,7 +4,7 @@ about: Suggest an idea for PVZM
 title: ""
 labels: "enhancement"
 assignees:
-    - ClaytonTDM
+    - clay-rip
     - ROBlNET13
 ---
 

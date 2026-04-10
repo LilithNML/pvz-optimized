@@ -4,7 +4,7 @@ This project is dual-licensed. Different parts of the codebase are covered by di
 
 ## Part 1: Original PVZM Content
 
-All original code and content created by the Plants vs. Zombies: MODDED team (ROBINET13 & Clay [ClaytonTDM]) is licensed under the **PolyForm Noncommercial License 1.0.0**.
+All original code and content created by the Plants vs. Zombies: MODDED team (ROBINET13 & Clay [clay.rip]) is licensed under the **PolyForm Noncommercial License 1.0.0**.
 
 <details open>
 
@@ -142,7 +142,7 @@ of your licenses.
 
 ---
 
-Required Notice: Plants vs. Zombies: MODDED (https://github.com/Plants-vs-Zombies-MODDED/game) © 2025 by ROBINET13 & Clay (ClaytonTDM) is dual-licensed. Original PVZM content is licensed under PolyForm Noncommercial License 1.0.0. Code derived from the original port by JiangNanGame and LonelyStar is licensed under the Changjiang River License (Version 3, July 2020). All Plants vs. Zombies intellectual property remains the exclusive property of PopCap Games and Electronic Arts (EA).
+Required Notice: Plants vs. Zombies: MODDED (https://github.com/Plants-vs-Zombies-MODDED/game) © 2025 by ROBINET13 & Clay (clay.rip) is dual-licensed. Original PVZM content is licensed under PolyForm Noncommercial License 1.0.0. Code derived from the original port by JiangNanGame and LonelyStar is licensed under the Changjiang River License (Version 3, July 2020). All Plants vs. Zombies intellectual property remains the exclusive property of PopCap Games and Electronic Arts (EA).
 
 ---
 
