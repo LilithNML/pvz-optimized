@@ -1364,10 +1364,19 @@ body.game-paused #cover {
 
 @keyframes credits_scroll {
 	from {
-		transform: translateY(550px);
+		translate: 0 400px;
 	}
 	to {
-		transform: translateY(-100%);
+		translate: 0 -82.5%;
+	}
+}
+
+@keyframes credits_exit {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(112.5%);
 	}
 }
 
@@ -1432,51 +1441,55 @@ body.game-paused #cover {
 			line-height: 1.49;
 		}
 	}
-	& > .content {
-		max-width: 565px;
-		margin-left: auto;
-		margin-right: auto;
+	& > .content-container {
 		transform: scale(1.3);
 		transform-origin: top center;
-		margin-top: 2rem;
-		animation: credits_scroll 75s linear forwards;
-		pointer-events: none;
-		font-family: "houseofterrormedium" !important;
-		text-transform: uppercase;
-		text-decoration-thickness: 2px;
-		&:hover {
-			animation-play-state: paused;
-		}
-		& * {
-			font-family: "houseofterrormedium" !important;
-			padding-top: 2px;
-			font-weight: normal;
-			text-transform: uppercase;
-		}
-		& a {
-			color: #fff;
-			text-decoration: underline;
-			pointer-events: auto;
-		}
-		& h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
-		}
-		& small {
-			opacity: 0.5;
-			font-size: 0.675em;
-			font-family: "briannetod", sans-serif !important;
-			max-width: 67.5%;
-			display: block;
+		& > .content {
+			max-width: 565px;
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: -1rem;
-			text-transform: none;
+			margin-top: 2rem;
+			animation:
+				credits_scroll 60s linear forwards,
+				credits_exit 1.5s ease-in 58.5s forwards;
+			pointer-events: none;
+			font-family: "houseofterrormedium" !important;
+			text-transform: uppercase;
+			text-decoration-thickness: 2px;
+			&:hover {
+				animation-play-state: paused;
+			}
+			& * {
+				font-family: "houseofterrormedium" !important;
+				padding-top: 2px;
+				font-weight: normal;
+				text-transform: uppercase;
+			}
+			& a {
+				color: #fff;
+				text-decoration: underline;
+				pointer-events: auto;
+			}
+			& h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+			& small {
+				opacity: 0.5;
+				font-size: 0.675em;
+				font-family: "briannetod", sans-serif !important;
+				max-width: 67.5%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -1rem;
+				text-transform: none;
+			}
 		}
 	}
 }

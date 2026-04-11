@@ -3285,7 +3285,7 @@ var ShowOptions = function () {
 	SetHidden($("pauseHomeIcon"));
 	$("pauseHome").onclick = function () {
 		PlaySound2("tap");
-		LoadMenu("credits");
+		LoadMenu("credits", undefined, {}, $("pauseHome"));
 	};
 	PlaySound2(oS.Lvl ? "gravebutton" : "tap");
 	SetBlock($("dOptionsMenuback"), $("dOptionsMenu"));
